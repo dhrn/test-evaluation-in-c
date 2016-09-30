@@ -165,7 +165,7 @@ line(50,100+l,600,100+l);
 }
 if(c==1||c==15)
 c=6;
-}while(kbhit()==0);
+}while(kbhit()==0);//key board hit
 getch();
 }
 

@@ -50,10 +50,10 @@ line(120,190+i,180,190+i);
 setcolor(15);
 outtextxy(200,220,"USER NAME AND PASSWORD");
 }
-void admin1()
+void login()
 { int i;
 char ch[10]="welcome";
-char a[30],p[30]="welcome",c;
+char a[30],p[30],c;
 closegraph();
 clrscr();
 printf("\n   \n     \n   enter your name  \n   enter your password :welcome  \n\n\n\n\n press  enter to contineau   ");
@@ -68,7 +68,7 @@ c=getch();
 p[i]=c;
 printf("*");
 }
-printf("%s",p);
+p[i]='\0';
 if((strcmp(p,ch))==0)
 admin();
 else
@@ -82,7 +82,7 @@ getch();
 void user1()
 { int i;
 char ch[10]="wel";
-char a[30],p[30]="wel",c;
+char a[30],p[30],c;
 closegraph();
 clrscr();
 printf("\n   \n     \n   enter your name  \n    enter your password :wel \n\n\n\n\n  press  enter to contineau   ");
@@ -97,7 +97,8 @@ c=getch();
 p[i]=c;
 printf("*");
 }
-printf("%s",p);
+p[i]='\0';
+//printf("%s",p);
 if((strcmp(p,ch))==0)
 user();
 else
@@ -196,7 +197,7 @@ printf("%d",m);
 //if(m==1)
 getch();
 fans();
-//printf("\n do you want to contineau press 2 or for exit 4");
+//printf("\n do you want to continue press 2 or for exit 4");
 //scanf("%d",&m);
 //if(m==2)
 clrscr();
@@ -211,7 +212,7 @@ int i,j;
 for(i=15;i>0;i--)
 {
 if(i<=15)
-printf("\r secs left:%d ",i);
+printf("\r secs left:%d ",i); //for counts intimation to user
 delay(1000);
 }
 }
@@ -299,7 +300,7 @@ if(x1<300&&x1>200&&y1>133&&y1<150&&z1==1)
 {
 cleardevice();
 //setcolor(0);
-admin1();
+login();
 }
 if(x1<270&&x1>220&&y1>255&&y1<257&&z1==1)
 {
